@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="login"
+                template="/WEB-INF/jsp/login/login.jsp">
+    </definition>
+    <definition name="logout"
+                template="/WEB-INF/jsp/login/login.jsp">
+    </definition>
+    <definition name="register"
+                template="/WEB-INF/jsp/login/register.jsp">
+    </definition>
+
+    <!-- Start Up Page -->
+    <definition name="homepage-startup.definition" template="/WEB-INF/jsp/layout/startup-layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/startup/header.jsp"/>
+<!--        <put-attribute name="sidebar" value="/WEB-INF/jsp/startup/.jsp"/>-->
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/startup/footer.jsp"/>
+    </definition>
+
+    <!-- Activity startup -->
+    <definition name="startup/listProject" extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/list-project.jsp" />
+    </definition>
+    <definition name="startup/projectDetail"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/project-detail.jsp" />
+    </definition>
+    <definition name="startup/saveProject"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/save-project.jsp" />
+    </definition>
+
+    <definition name="user/userListProject"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/user-list-project.jsp" />
+    </definition>
+
+    <definition name="startup/acceptInvestion"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/accept-investion.jsp" />
+    </definition>
+
+    <definition name="user/userListImage"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/user-image-of-project.jsp" />
+    </definition>
+    <definition name="user/userProfile"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/user-profile.jsp" />
+    </definition>
+
+    <definition name="user/updateProfile"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/user-update-profile.jsp" />
+    </definition>
+
+    <definition name="page404"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/startup/page-404.jsp" />
+    </definition>
+
+    <!--    INVESTORS-->
+    <definition name="investor"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/investors/investors-list.jsp" />
+    </definition>
+    <definition name="investorsdetails"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/investors/investors-details.jsp" />
+    </definition>
+    <definition name="investedProjects"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/investors/invested-projects.jsp" />
+    </definition>
+
+    <definition name="company"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/investors/company.jsp" />
+    </definition>
+    <definition name="saveCompany"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/investors/saveCompany.jsp" />
+    </definition>
+<!--====================================================================-->
+    <definition name="event"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/event/list-event.jsp" />
+    </definition>
+    <definition name="detailsEvent"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/event/event-details.jsp" />
+    </definition>
+    <definition name="blog"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/blog/list-blog.jsp" />
+    </definition>
+    <definition name="detailsBlog"
+                extends="homepage-startup.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/blog/details-blog.jsp" />
+    </definition>
+
+    <!--    ======================================="admin"=======================-->
+    <definition name="listAcount"
+                template="/WEB-INF/jsp/admin/user/listUser.jsp">
+    </definition>
+    <definition name="addUser"
+                template="/WEB-INF/jsp/admin/user/addUser.jsp">
+    </definition>
+    <definition name="listProject"
+                template="/WEB-INF/jsp/admin/project/listProject.jsp">
+    </definition>
+    <definition name="detailsProject"
+                template="/WEB-INF/jsp/admin/project/detailsProject.jsp">
+    </definition>
+    <definition name="statistical"
+                template="/WEB-INF/jsp/admin/statistical.jsp">
+    </definition>
+    <definition name="homepage"
+                template="/WEB-INF/jsp/admin/homepage.jsp">
+    </definition>
+    <definition name="listBlog"
+                template="/WEB-INF/jsp/admin/blog/ListBlogs.jsp">
+    </definition>
+    <definition name="saveBlog"
+                template="/WEB-INF/jsp/admin/blog/addBlog.jsp">
+    </definition>
+<!--    &lt;!&ndash; Home Page GV &ndash;&gt;-->
+<!--    <definition name="homepage-gv.definition" template="/WEB-INF/jsp/layout/giaovien-layout.jsp">-->
+<!--        <put-attribute name="topbar" value="/WEB-INF/jsp/topbar.jsp"/>-->
+<!--        <put-attribute name="sidebar" value="/WEB-INF/jsp/giaovien/sidebar.jsp"/>-->
+<!--        <put-attribute name="body" value="" />-->
+<!--        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"/>-->
+<!--    </definition>-->
+<!--    &lt;!&ndash; Activity GV &ndash;&gt;-->
+<!--    <definition name="GV/capnhatdkpm" extends="homepage-gv.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/giaovien/dkpm_gv.jsp" />-->
+<!--    </definition>-->
+
+    <!--    SinhVien-->
+<!--    <definition name="homepage-sv.definition" template="/WEB-INF/jsp/layout/sinhvien-layout.jsp">-->
+<!--        <put-attribute name="topbar" value="/WEB-INF/jsp/topbar.jsp"/>-->
+<!--        <put-attribute name="sidebar" value="/WEB-INF/jsp/sinhvien/sidebar.jsp"/>-->
+<!--        <put-attribute name="body" value="" />-->
+<!--        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"/>-->
+<!--    </definition>-->
+
+    <!-- Activity SV -->
+<!--    <definition name="SV/capnhatdkpm" extends="homepage-sv.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/sinhvien/dkpm_sv.jsp" />-->
+<!--    </definition>-->
+</tiles-definitions>
