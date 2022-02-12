@@ -68,7 +68,7 @@
     <section id="main-container" class="main-container">
         <div class="container">
             <div class="row">
-                <div class="col-lg mb-5 mb-lg-0">
+                <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="post-content post-single">
                         <h4><a href="#"> ${project.category.categoryname} > ${project.projectname}</a></h4>
                         <div class="post-media post-image">
@@ -86,7 +86,8 @@
                                 <h5>
                                     -> Mục đích dự án: ${project.title}
                                 </h5>
-                                <h4 style=" color: orange">Số vốn kêu gọi: <fmt:formatNumber value="${project.amountcalled}" maxFractionDigits="0" currencyCode="VND" type="currency" currencySymbol="VND"/></h4>
+<%--                                <h4 style=" color: orange">Số vốn kêu gọi: <fmt:formatNumber value="${project.amountcalled}" maxFractionDigits="0" currencyCode="VND" type="currency" currencySymbol="VND"/></h4>--%>
+                                    <h4 style=" color: orange">Số vốn kêu gọi: <fmt:formatNumber value="${project.amountcalled}" maxFractionDigits="0"/> VND</h4>
                                 <blockquote>
                                     <p>Location: ${project.houseno} - ${project.subdistrict} - ${project.district}
                                         - ${project.province} - ${project.country}</p>
@@ -97,14 +98,14 @@
                             <div class="entry-content">
                                 <textarea class="form-control" id="projectDetail" style="height: 100vh; color: black" >${project.projectdetail}</textarea>
                             </div>
-                            <div id="page-slider" class="page-slider" style="display: flex; justify-content: center; align-items: center;">
+                            <!-- Page slider end -->
+                            <div id="page-slider" class="page-slider" style="display: flex; justify-content: center; align-items: center; margin-top: 1%">
                                 <c:forEach items="${imageOfProject}" var="image">
                                     <div class="item" style="text-align: center;">
                                         <img loading="lazy" class="img-fluid" src="/images/projectImages/${image.imagename}" />
                                     </div>
                                 </c:forEach>
-                            </div><!-- Page slider end -->
-
+                            </div>
                         </div>
                         <!-- post-body end -->
                     </div>
@@ -130,7 +131,10 @@
                                     <button class="btn btn-outline-success" style="margin-left: 4%">Xác nhận</button>
                                 </c:when>
                                 <c:otherwise>
-                                    <button class="btn btn-outline-success" onclick="return confirm('Bạn cần đăng nhập trước!')" style="margin-left: 4%">Xác nhận</button>
+<%--                                    <button class="btn btn-outline-success" onclick="return confirm('Bạn cần đăng nhập trước!')" style="margin-left: 4%">Xác nhận</button>--%>
+                                    <a class="btn btn-outline-success" style="margin-left: 4%"data-toggle="modal" data-target="#loginModal">
+                                        Xác nhận
+                                    </a>
                                 </c:otherwise>
                             </c:choose>
                         </form>
@@ -228,7 +232,10 @@
                                             <button class="btn btn-primary" type="submit" aria-label="post-comment">Gửi</button>
                                         </c:when>
                                         <c:otherwise>
-                                            <button class="btn btn-primary" type="submit" onclick="return confirm('Bạn cần đăng nhập trước')" aria-label="post-comment">Gửi</button>
+<%--                                            <button class="btn btn-primary" type="submit" onclick="return confirm('Bạn cần đăng nhập trước')" aria-label="post-comment">Gửi</button>--%>
+                                            <a class="btn btn-outline-success" style="margin-left: 4%"data-toggle="modal" data-target="#loginModal">
+                                                Gửi
+                                            </a>
                                         </c:otherwise>
                                     </c:choose>
 
@@ -249,7 +256,7 @@
                                             </div>
                                             <div class="comment-content">
                                                 <p>
-                                                   ${comment.binhluan}
+                                                        ${comment.binhluan}
                                                 </p>
                                             </div>
                                         </div>
@@ -264,76 +271,76 @@
 
                 </div>
                 <div class="col-lg-4">
-                <div class="sidebar sidebar-right">
-                    <div class="widget recent-posts">
-                        <h3 class="widget-title">Blog</h3>
-                        <ul class="list-unstyled">
-                            <li class="d-flex align-items-center">
-                                <div class="posts-thumb">
-                                    <a href="#"><img loading="lazy" alt="img" width="400" height="600" src="/images/blog/blog1.jpg"></a>
-                                </div>
-                                <div class="post-info">
-                                    <h4 class="entry-title">
-                                        <a href="#">Tỷ Phú Marc Lore Và Những Sáng Kiến Xây Dựng Lại Hệ Sinh Thái</a>
-                                    </h4>
-                                </div>
-                            </li><!-- 1st post end-->
+                    <div class="sidebar sidebar-right">
+                        <div class="widget recent-posts">
+                            <h3 class="widget-title">Blog</h3>
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center">
+                                    <div class="posts-thumb">
+                                        <a href="#"><img loading="lazy" alt="img" width="400" height="600" src="/images/blog/blog1.jpg"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4 class="entry-title">
+                                            <a href="#">Tỷ Phú Marc Lore Và Những Sáng Kiến Xây Dựng Lại Hệ Sinh Thái</a>
+                                        </h4>
+                                    </div>
+                                </li><!-- 1st post end-->
 
-                            <li class="d-flex align-items-center">
-                                <div class="posts-thumb">
-                                    <a href="#"><img loading="lazy" alt="img" src="/images/blog/blog2.jpg"></a>
-                                </div>
-                                <div class="post-info">
-                                    <h4 class="entry-title">
-                                        <a href="#">Bài Học Từ Thất Bại Ở Leflair</a>
-                                    </h4>
-                                </div>
-                            </li><!-- 2nd post end-->
+                                <li class="d-flex align-items-center">
+                                    <div class="posts-thumb">
+                                        <a href="#"><img loading="lazy" alt="img" src="/images/blog/blog2.jpg"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4 class="entry-title">
+                                            <a href="#">Bài Học Từ Thất Bại Ở Leflair</a>
+                                        </h4>
+                                    </div>
+                                </li><!-- 2nd post end-->
 
-                            <li class="d-flex align-items-center">
-                                <div class="posts-thumb">
-                                    <a href="#"><img loading="lazy" alt="img" src="/images/blog/bl3.jpg"></a>
-                                </div>
-                                <div class="post-info">
-                                    <h4 class="entry-title">
-                                        <a href="#">Bí Quyết Thuyết Trình: Càng Đơn Giản, Càng Thuyết Phục</a>
-                                    </h4>
-                                </div>
-                            </li><!-- 3rd post end-->
+                                <li class="d-flex align-items-center">
+                                    <div class="posts-thumb">
+                                        <a href="#"><img loading="lazy" alt="img" src="/images/blog/bl3.jpg"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4 class="entry-title">
+                                            <a href="#">Bí Quyết Thuyết Trình: Càng Đơn Giản, Càng Thuyết Phục</a>
+                                        </h4>
+                                    </div>
+                                </li><!-- 3rd post end-->
 
-                        </ul>
+                            </ul>
 
-                    </div><!-- Recent post end -->
+                        </div><!-- Recent post end -->
 
-                    <div class="widget">
-                        <h3 class="widget-title">Thể loại</h3>
-                        <ul class="arrow nav nav-tabs">
-                            <li><a href="#">Công nghệ thông tin</a></li>
-                            <li><a href="#">Tài chính - Ngân Hàng</a></li>
-                            <li><a href="#">Xây dựng</a></li>
-                            <li><a href="#">Cơ khí</a></li>
-                            <li><a href="#">Du lịch</a></li>
-                        </ul>
-                    </div><!-- Categories end -->
+                        <div class="widget">
+                            <h3 class="widget-title">Thể loại</h3>
+                            <ul class="arrow nav nav-tabs">
+                                <li><a href="#">Công nghệ thông tin</a></li>
+                                <li><a href="#">Tài chính - Ngân Hàng</a></li>
+                                <li><a href="#">Xây dựng</a></li>
+                                <li><a href="#">Cơ khí</a></li>
+                                <li><a href="#">Du lịch</a></li>
+                            </ul>
+                        </div><!-- Categories end -->
 
-                    <div class="widget widget-tags">
-                        <h3 class="widget-title">Tags </h3>
+                        <div class="widget widget-tags">
+                            <h3 class="widget-title">Tags </h3>
 
-                        <ul class="list-unstyled">
-                            <li><a href="#">Công nghệ thông tin</a></li>
-                            <li><a href="#">Tài chính - Ngân Hàng</a></li>
-                            <li><a href="#">Xây Dựng</a></li>
-                            <li><a href="#">Cơ Khí</a></li>
-                            <li><a href="#">Du Lịch</a></li>
-                            <li><a href="#">Viễn Thông</a></li>
-                            <li><a href="#">Kinh Doanh</a></li>
-                            <li><a href="#">Giáo Dục</a></li>
-                        </ul>
-                    </div><!-- Tags end -->
+                            <ul class="list-unstyled">
+                                <li><a href="#">Công nghệ thông tin</a></li>
+                                <li><a href="#">Tài chính - Ngân Hàng</a></li>
+                                <li><a href="#">Xây Dựng</a></li>
+                                <li><a href="#">Cơ Khí</a></li>
+                                <li><a href="#">Du Lịch</a></li>
+                                <li><a href="#">Viễn Thông</a></li>
+                                <li><a href="#">Kinh Doanh</a></li>
+                                <li><a href="#">Giáo Dục</a></li>
+                            </ul>
+                        </div><!-- Tags end -->
 
 
-                </div><!-- Sidebar end -->
-            </div><!-- Sidebar Col end -->
+                    </div><!-- Sidebar end -->
+                </div><!-- Sidebar Col end -->
             </div>
             <!-- Main row end -->
         </div>
@@ -342,6 +349,24 @@
     <!-- Main container end -->
 
     <!-- Footer end -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Bạn cần đăng nhập trước! </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal" style="font-weight: bold">TRỞ VỀ</button>
+                    <a class="btn btn-primary" href="/login">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Javascript Files
 ================================================== -->

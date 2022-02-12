@@ -46,14 +46,11 @@ public class Users {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Comments> comments;
     @JsonIgnore
-
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<EventsReferences> eventsReferences;
     @JsonIgnore
-
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<News> news;
-
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<StartUpCurriculumVitae> startUpCurriculumVitaes;

@@ -129,6 +129,7 @@
     <definition name="saveBlog"
                 template="/WEB-INF/jsp/admin/blog/addBlog.jsp">
     </definition>
+
 <!--    &lt;!&ndash; Home Page GV &ndash;&gt;-->
 <!--    <definition name="homepage-gv.definition" template="/WEB-INF/jsp/layout/giaovien-layout.jsp">-->
 <!--        <put-attribute name="topbar" value="/WEB-INF/jsp/topbar.jsp"/>-->

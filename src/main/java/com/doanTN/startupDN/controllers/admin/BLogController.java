@@ -60,7 +60,8 @@ public class BLogController {
             String imgPresent = image.getOriginalFilename();
             Path imgPresentPath = Paths.get("src/main/resources/static/images/blog/" + imgPresent);
             Files.write(imgPresentPath, image.getBytes());
-            blogServices.saveBlog(blogs.getTitle(),blogs.getContent(),blogs.getPosteddate(),imgPresent);
+            java.util.Date posteddate = new java.util.Date();
+            blogServices.saveBlog(blogs.getTitle(),blogs.getContent(),posteddate,imgPresent);
             return "redirect:/admin/blog";
         }
         String imgPresent = image.getOriginalFilename();
@@ -77,12 +78,12 @@ public class BLogController {
             return "redirect:/login";
         }
         else{
-                model.addAttribute("blogs", blogs);
-                model.addAttribute("blogForm", new Blogs(blogs.getId(),blogs.getTitle(),
-                        blogs.getContent(),blogs.getPosteddate(),blogs.getImage()));
-                return "saveBlog";
-            }
+            model.addAttribute("blogs", blogs);
+            model.addAttribute("blogForm", new Blogs(blogs.getId(),blogs.getTitle(),
+                    blogs.getContent(),blogs.getPosteddate(),blogs.getImage()));
+            return "saveBlog";
         }
+    }
     @GetMapping("/admin/deleteBLog/{id}")
     public String deleteBLog(@PathVariable Long id, HttpSession session) {
         Users user = (Users) session.getAttribute("user");

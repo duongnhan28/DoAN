@@ -32,4 +32,18 @@ public class InvestorForm {
     @NotBlank(message = "Vui lòng nhập email")
     private String email;
 
+//    public InvestorForm(Long id, @NotBlank(message = "Vui lòng nhập tên") String investorsname, @NotBlank(message = "Vui lòng nhập tên viết tắt") String abbreviations, String logo, @NotBlank(message = "Vui lòng nhập nội dung") String content, String country, String province, String district, String subdistrict, @NotBlank(message = "Vui lòng nhập địa chỉ cụ thể") String houseno, @NotBlank(message = "Vui lòng nhập số điện thoại liên lạc") String sdt, String email) {
+//        this.id = id;
+//        this.investorsname = investorsname;
+//        this.abbreviations = abbreviations;
+//        this.logo = logo;
+//        this.content = content;
+//        this.country = country;
+//        this.province = province;
+//        this.district = district;
+//        this.subdistrict = subdistrict;
+//        this.houseno = houseno;
+//        this.sdt = sdt;
+//        this.email = email;
+//    }
 }

@@ -74,7 +74,6 @@
                                     <%--                                    <li><a href="/startup/userListImage">Hình ảnh dự án</a></li>--%>
                                 </c:if>
                                 <c:if test="${profileUser.roles == 'startup'}">
-                                    <li><a href="/startup/saveProject">Đăng dự án</a></li>
                                     <li><a href="/user/userListProject">Các dự án của tôi</a></li>
                                     <li ><a href="/user/userListImage">Hình ảnh dự án</a></li>
                                     <li class="active"><a href="/startup/acceptInvestion">Các yêu cầu đầu tư</a></li>

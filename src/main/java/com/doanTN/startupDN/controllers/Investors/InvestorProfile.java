@@ -71,25 +71,26 @@ public class InvestorProfile {
     }
     @PostMapping("investor/save")
     public String postUpdateInvestor(Model model, @RequestParam("logo") MultipartFile logo,
-                                     @Valid @ModelAttribute("projectForm") InvestorForm investorForm, BindingResult bindingResult, HttpSession session) throws IOException {
+                                     @Valid @ModelAttribute("investorsForm") InvestorForm investorForm, BindingResult bindingResult, HttpSession session) throws IOException {
         Users user = (Users) session.getAttribute("user");
         if (bindingResult.hasErrors()) {
             model.addAttribute("error");
+//            return "saveCompany";
         }
         if (investorForm.getId() == null || investorForm.getId().equals("")) {
             String imgPresent = logo.getOriginalFilename();
-            Path imgPresentPath = Paths.get("src/main/resources/static/images/nhadautu/" + imgPresent);
+            Path imgPresentPath = Paths.get("src/main/resources/static/ndt/images/nhadautu/" + imgPresent);
             Files.write(imgPresentPath, logo.getBytes());
-            investorsServices.saveInvestor(userDAO.getUsersByUsername(user.getUsername()),investorForm.getInvestorsname(), investorForm.getAbbreviations(), imgPresent, investorForm.getContent(), investorForm.getCountry(),
+            investorsServices.saveInvestor(userDAO.getUsersByUsername(user.getUsername()),investorForm.getInvestorsname(), investorForm.getAbbreviations(), imgPresent, investorForm.getContent(), "Việt Nam",
                     provinceService.findProvinceNameById(investorForm.getProvince()), districtService.findDistrictNameById(investorForm.getDistrict()),
                     subDistrictService.findSubDistrictNameById(investorForm.getSubdistrict()), investorForm.getHouseno(), investorForm.getSdt(), investorForm.getEmail());
             return "redirect:/investor/company";
         }
         String imgPresent = logo.getOriginalFilename();
-        Path imgPresentPath = Paths.get("src/main/resources/static/images/nhadautu/" + imgPresent);
+        Path imgPresentPath = Paths.get("src/main/resources/static/ndt/images/nhadautu/" + imgPresent);
         Files.write(imgPresentPath, logo.getBytes());
         investorsServices.updateInvestor(investorForm.getId(),
-                investorForm.getInvestorsname(), investorForm.getAbbreviations(), imgPresent, investorForm.getContent(), investorForm.getCountry(),
+                investorForm.getInvestorsname(), investorForm.getAbbreviations(), imgPresent, investorForm.getContent(), "Việt Nam",
                 provinceService.findProvinceNameById(investorForm.getProvince()), districtService.findDistrictNameById(investorForm.getDistrict()),
                 subDistrictService.findSubDistrictNameById(investorForm.getSubdistrict()), investorForm.getHouseno(), investorForm.getSdt(), investorForm.getEmail());
         return "redirect:/investor/company";

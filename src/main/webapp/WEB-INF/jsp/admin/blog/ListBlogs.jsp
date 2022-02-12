@@ -330,8 +330,8 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Tiêu đề</th>
-                                    <th>Sửa</th>
-                                    <th>Xóa</th>
+                                    <th align="center">Sửa</th>
+                                    <th align="center">Xóa</th>
 
                                 </tr>
                                 </thead>

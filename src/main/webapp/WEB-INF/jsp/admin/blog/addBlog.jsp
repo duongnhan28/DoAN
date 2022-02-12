@@ -332,7 +332,7 @@
                                 </div>
                                 <label>Lưu ý: </label>
                                 <div class="form-group">
-                                    <label>LoGo</label>
+                                    <label>Ảnh Blog</label>
                                     <input type="file" name="image" id="image">
                                 </div>
 

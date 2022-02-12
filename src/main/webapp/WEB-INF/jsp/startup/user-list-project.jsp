@@ -171,7 +171,7 @@
                                             </td>
                                             <td align="center"><a href="/startup/saveProject/${project.id}"
                                                                   title="Chỉnh sửa"><i class="fa fa-pen"></i></a></td>
-                                            <td align="center"><a href="/startup/deleteProject/${project.id}"
+                                            <td align="center"><a href="/startup/delProject/${project.id}"
                                                                   title="Hủy đăng ký"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>

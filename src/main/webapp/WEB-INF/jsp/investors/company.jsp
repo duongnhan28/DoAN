@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-xl-3 col-lg-3">
+                <div class="col-xl-3 col-lg-4">
                     <div class="sidebar sidebar-left">
                         <div class="widget">
                             <h3 class="widget-title">Danh Mục</h3>
@@ -91,7 +91,7 @@
                     </div><!-- Sidebar end -->
                 </div><!-- Sidebar Col end -->
 
-                <div class="col-xl-9 col-lg-9">
+                <div class="col-xl-8 col-lg-8">
                     <div class="content-inner-page">
                         <div class="col-md-12 form-group text-right">
                             <a class="btn btn-success" href="/investor/save" >Thêm mới</a>
@@ -116,6 +116,9 @@
                                         <th align="center" scope="col" colspan="2">Hoạt động</th>
                                     </tr>
                                     </thead>
+
+
+
                                     <c:forEach items="${listInvesterOfUser}" var="investors">
                                         <tr>
                                             <td>${investors.investorsname}</td>

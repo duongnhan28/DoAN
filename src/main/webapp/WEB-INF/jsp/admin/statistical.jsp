@@ -78,7 +78,7 @@
         <li class="nav-item active">
             <a class="nav-link" href="/admin/blog">
                 <i class="fas fa-fw fa-table"></i>
-                <span>BLog</span></a>
+                <span>Blog</span></a>
         </li>
 
         <li class="nav-item active">

@@ -77,6 +77,7 @@
                 <i class="fas fa-fw fa-table"></i>
                 <span>Blog</span></a>
         </li>
+
         <li class="nav-item active">
             <a class="nav-link" href="/admin/statistics">
                 <i class="fas fa-fw fa-table"></i>
@@ -316,6 +317,7 @@
                 <div class="card shadow mb-8">
                     <div class="card-header py-3">
                         <button  type="button" class="btn btn-primary"><a style="color: white" href="/admin/blog/save" >Thêm mới</a></button>
+
                     </div>
 
                     <div class="card-body">
@@ -343,7 +345,7 @@
                                     <td>${user.gender}</td>
                                     <td>${user.phone}</td>
                                     <td>${user.roles}</td>
-                                    <td><a href="/admin/deleteUser/${user.id}"><i class="fa fa-trash"></i></a></td>
+                                    <td  align="center" ><a href="/admin/deleteUser/${user.id}"><i class="fa fa-trash"></i></a></td>
                                     </td>
                                 </tr>
                                 </c:forEach>

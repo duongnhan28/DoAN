@@ -206,7 +206,6 @@ public class ProjectService {
 
 
     @Transactional
-    public List<Projects> geta(Long userId){
-        return projectDAO.geta(userId);
+    public void delProject(Long id){ projectDAO.deleteById(id);
     }
 }

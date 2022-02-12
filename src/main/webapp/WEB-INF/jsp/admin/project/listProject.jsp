@@ -37,7 +37,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -78,7 +78,7 @@
         <li class="nav-item active">
             <a class="nav-link" href="/admin/blog">
                 <i class="fas fa-fw fa-table"></i>
-                <span>BLog</span></a>
+                <span>Blog</span></a>
         </li>
 
         <li class="nav-item active">
@@ -318,9 +318,7 @@
 
                 <!-- DataTales Example -->
                 <div class="card shadow mb-8">
-                    <div class="card-header py-3">
-                        <a href="" class="m-0 font-weight-bold text-primary">Add</a>
-                    </div>
+
 
                     <div class="card-body">
                         <div class="table-responsive">

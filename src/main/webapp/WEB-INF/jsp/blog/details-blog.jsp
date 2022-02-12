@@ -77,19 +77,19 @@
                                         ${details.title}
                                     </h2>
                                 </div>
-                                    <p>Cập nhật: ${details.posteddate} | <a href="/blog">ƯƠM TẠO KHỞI NGHIỆP</a></p>
+                                <p>Cập nhật: ${details.posteddate} | <a href="/blog">ƯƠM TẠO KHỞI NGHIỆP</a></p>
                                 <div style="text-align:center ">
-                                <div class="row no-gutters">
-                                    <div class="col-10 logo_supporter"><img height="420" width="500" src="/images/blog/${details.image}"
-                                                                            alt="Quỹ đổi mới công nghệ quốc gia"></div>
-                                </div>
+                                    <div class="row no-gutters">
+                                        <div class="col-10 logo_supporter"><img height="420" width="500" src="/images/blog/${details.image}"
+                                                                                alt="Quỹ đổi mới công nghệ quốc gia"></div>
+                                    </div>
                                 </div>
                                 <!-- header end -->
                                 <div style="margin-top: 5%"><strong>Nôi dung:</strong></div>
                                 <div class="entry-content">
 
                                 <textarea class="form-control" id="details" style="height: 150vh; color: black"
-                                         >${details.content}</textarea>
+                                >${details.content}</textarea>
                                 </div>
                                 <div id="page-slider" class="page-slider">
                                 </div><!-- Page slider end -->
@@ -177,10 +177,10 @@
 
                     </div><!-- Sidebar end -->
                 </div><!-- Sidebar Col end -->
-                </div>
-
             </div>
-            <!-- Main row end -->
+
+        </div>
+        <!-- Main row end -->
         <!-- Conatiner end -->
     </section>
 

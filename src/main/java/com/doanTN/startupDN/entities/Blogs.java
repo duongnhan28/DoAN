@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -19,10 +19,10 @@ public class Blogs {
     private Long id;
     private String title;
     private String content;
-    private String posteddate;
+    private Date posteddate;
     private String image;
 
-    public Blogs(String title, String content, String posteddate,String image) {
+    public Blogs(String title, String content, Date posteddate, String image) {
         this.title = title;
         this.content = content;
         this.posteddate = posteddate;

@@ -40,15 +40,15 @@
                                 </div>
                             </li>
                             <li class="header-get-a-quote">
-                                   <c:choose>
-                                       <c:when test="${user.fullname!=null}">
-                                           <a class="btn btn-primary" id="userLogin" href="/user/userProfile" title="Thông tin cá nhân">${user.fullname}</a>
-                                           <a href="/logout" onclick="return confirm('Bạn có muốn đăng xuất?')" class="btn-outline-warning">Đăng xuất</a>
-                                       </c:when>
-                                       <c:otherwise>
-                                           <a class="btn btn-primary" id="userLogin" href="/user/userProfile" title="Thông tin cá nhân">Login</a>
-                                       </c:otherwise>
-                                   </c:choose>
+                                <c:choose>
+                                    <c:when test="${user.fullname!=null}">
+                                        <a class="btn btn-primary" id="userLogin" href="/user/userProfile" title="Thông tin cá nhân">${user.fullname}</a>
+                                        <a href="/logout" onclick="return confirm('Bạn có muốn đăng xuất?')" class="btn-outline-warning">Đăng xuất</a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a class="btn btn-primary" id="userLogin" href="/user/userProfile" title="Thông tin cá nhân">Login</a>
+                                    </c:otherwise>
+                                </c:choose>
                             </li>
                         </ul><!-- Ul end -->
                     </div><!-- header right end -->
@@ -77,29 +77,29 @@
                                     <a href="/investor" class="nav-link dropdown-toggle" >Nhà đầu tư</a>
 
                                 </li>
-<%--                                <li class="nav-item dropdown">--%>
-<%--                                    <a href="/startup/listProject" class="nav-link dropdown-toggle">Dự án</a>--%>
-<%--                                    <c:if test="${user.roles == 'startup'}">--%>
-<%--                                        <ul class="dropdown-menu" role="menu">--%>
-<%--                                            <li><a href="/user/userListProject">Các dự án của tôi</a></li>--%>
-<%--                                            <li><a href="/startup/saveProject">Đăng dự án</a></li>--%>
-<%--                                        </ul>--%>
-<%--                                    </c:if>--%>
+                                <%--                                <li class="nav-item dropdown">--%>
+                                <%--                                    <a href="/startup/listProject" class="nav-link dropdown-toggle">Dự án</a>--%>
+                                <%--                                    <c:if test="${user.roles == 'startup'}">--%>
+                                <%--                                        <ul class="dropdown-menu" role="menu">--%>
+                                <%--                                            <li><a href="/user/userListProject">Các dự án của tôi</a></li>--%>
+                                <%--                                            <li><a href="/startup/saveProject">Đăng dự án</a></li>--%>
+                                <%--                                        </ul>--%>
+                                <%--                                    </c:if>--%>
 
 
-<%--                                </li>--%>
+                                <%--                                </li>--%>
                                 <li class="nav-item"><a class="nav-link" href="/startup/listProject">Dự án</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/startup/listProject">Sự kiện</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/blog">Ươm tạo khởi nghiệp</a></li>
-<%--                                <li class="nav-item dropdown">--%>
-<%--                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>--%>
-<%--                                    <ul class="dropdown-menu" role="menu">--%>
-<%--                                        <li><a href="#">News Left Sidebar</a></li>--%>
-<%--                                        <li><a href="#">News Right Sidebar</a></li>--%>
-<%--                                        <li><a href="#">News Single</a></li>--%>
-<%--                                    </ul>--%>
-<%--                                </li>--%>
-<%--                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>--%>
+                                <%--                                <li class="nav-item dropdown">--%>
+                                <%--                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>--%>
+                                <%--                                    <ul class="dropdown-menu" role="menu">--%>
+                                <%--                                        <li><a href="#">News Left Sidebar</a></li>--%>
+                                <%--                                        <li><a href="#">News Right Sidebar</a></li>--%>
+                                <%--                                        <li><a href="#">News Single</a></li>--%>
+                                <%--                                    </ul>--%>
+                                <%--                                </li>--%>
+                                <%--                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>--%>
                             </ul>
                         </div>
                     </nav>
@@ -124,3 +124,4 @@
     </div>
     <!--/ Navigation end -->
 </header>
+1

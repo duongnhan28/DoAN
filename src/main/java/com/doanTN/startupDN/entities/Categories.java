@@ -25,7 +25,6 @@ public class Categories {
     @JsonIgnore@OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<Projects> projects;
 
-
     @JsonIgnore
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<EventsReferences> eventsReferences;

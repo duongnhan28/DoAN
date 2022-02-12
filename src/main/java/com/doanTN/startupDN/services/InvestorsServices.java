@@ -4,6 +4,7 @@ import com.doanTN.startupDN.daos.InvestorsDAO;
 import com.doanTN.startupDN.entities.Investors;
 import com.doanTN.startupDN.entities.Users;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,9 +15,14 @@ public class InvestorsServices {
     @Autowired
     private InvestorsDAO investorsDAO;
 
+
     @Transactional
-    public List<Investors> getAllInvestors(){
-        return investorsDAO.findAll();
+    public List<Investors> getAllInvestors(Pageable pageable){
+        return investorsDAO.getInvestors(pageable);
+    }
+    @Transactional
+    public int getTotalInvestor(){
+        return investorsDAO.getTotalInvestor();
     }
 
     @Transactional

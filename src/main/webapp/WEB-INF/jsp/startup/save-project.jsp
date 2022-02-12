@@ -86,12 +86,12 @@
                         </div>
                         <div class="form-group">
                             <label for="projectname">Tên dự án</label>
-                            <form:input path="projectname" class="form-control" id="projectname"  placeholder="Nhập tên dự án"/>
+                            <form:input path="projectname" class="form-control" id="projectname" placeholder="Nhập tên dự án"/>
                             <form:errors path="projectname"/>
                         </div>
                         <div class="form-group">
                             <label for="title">Tiêu đề cho dự án (Mục đích)</label>
-                            <form:input path="title" class="form-control" id="title"/>
+                            <form:input path="title" class="form-control" id="title" placeholder="Nhập tiêu đề dự án"/>
                             <form:errors path="title"/>
                         </div>
                         <div class="form-group">

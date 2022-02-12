@@ -65,30 +65,30 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="row">
                         <c:forEach items="${blog}" var="blog">
-                        <div class="post">
-                            <div class="post-media post-image">
-                                <img loading="lazy" src="images/blog/${blog.image}" width="250" height="250">
-                            </div>
-
-                            <div class="post-body" style=" margin-left: 20px;">
-                                <div class="entry-header">
-                                    <h2 class="entry-title">
-                                        <a href="/blog/details/${blog.id}">${blog.title}</a>
-                                    </h2>
-                                    <span>Cập nhật: ${blog.posteddate} | <a href="/blog/details/${blog.id}">ƯƠM TẠO KHỞI NGHIỆP</a></span>
-                                </div><!-- header end -->
-                                <div class="entry-content">
-                                    <p>Bí quyết thành công với 6 bước đơn giản để bắt đầu khởi nghiệp kinh doanh riêng
+                            <div class="post">
+                                <div class="post-media post-image">
+                                    <img loading="lazy" src="images/blog/${blog.image}" width="250" height="250">
                                 </div>
 
+                                <div class="post-body" style=" margin-left: 20px;">
+                                    <div class="entry-header">
+                                        <h2 class="entry-title">
+                                            <a href="/blog/details/${blog.id}">${blog.title}</a>
+                                        </h2>
+                                        <span>Cập nhật: ${blog.posteddate} | <a href="/blog/details/${blog.id}">ƯƠM TẠO KHỞI NGHIỆP</a></span>
+                                    </div><!-- header end -->
+                                    <div class="entry-content">
+                                        <p>Bí quyết thành công với 6 bước đơn giản để bắt đầu khởi nghiệp kinh doanh riêng
+                                    </div>
 
-                                <div class="post-footer">
-                                    <a href="/blog/details/${blog.id}" class="btn btn-primary">Continue Reading</a>
-                                </div>
+
+                                    <div class="post-footer">
+                                        <a href="/blog/details/${blog.id}" class="btn btn-primary">Continue Reading</a>
+                                    </div>
 
 
-                            </div><!-- post-body end -->
-                        </div><!-- 1st post end -->
+                                </div><!-- post-body end -->
+                            </div><!-- 1st post end -->
                         </c:forEach>
 
 

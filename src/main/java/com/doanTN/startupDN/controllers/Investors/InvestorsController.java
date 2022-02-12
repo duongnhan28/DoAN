@@ -7,6 +7,8 @@ import com.doanTN.startupDN.entities.Projects;
 import com.doanTN.startupDN.entities.Users;
 import com.doanTN.startupDN.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
@@ -29,10 +31,16 @@ public class InvestorsController {
     @Autowired
     JavaMailSender javaMailSender;
 
+
+    public static final int PAGE_SIZE = 8;
     @GetMapping("/investor")
-    public String getAllInvestors(Model model) {
-            model.addAttribute("investors", investorsServices.getAllInvestors());
-            return "investor";
+    public String getListInvestor(Model model, HttpSession session,
+                                 @RequestParam(value = "page", defaultValue = "1") int page) {
+        Pageable pageable= PageRequest.of(page-1,PAGE_SIZE);
+        session.getAttribute("user");
+        model.addAttribute("investors", investorsServices.getAllInvestors(pageable));
+        model.addAttribute("pageSize",(investorsServices.getTotalInvestor()/PAGE_SIZE)+1);
+        return "investor";
     }
 
     @GetMapping("/investor/details/{id}")

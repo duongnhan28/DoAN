@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-heading">
-                            <h1 class="banner-title">Nhà đầu tư</h1>
+                            <h1 class="banner-title">Dự án</h1>
                             <!-- <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                   <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg mb-5 mb-lg-0">
                         <h1 style="margin-bottom: 10%">Dự án của bạn</h1>
-                        <form:form action="/startup/saveProject" method="POST" modelAttribute="projectForm" enctype="multipart/form-data">
+                        <form:form action="/startup/saveProject" method="POST" modelAttribute="investorsForm" enctype="multipart/form-data">
                             <form:hidden path="id"/>
                             <h5 style="color: red">${message}</h5>
                             <div class="form-group">
@@ -108,12 +108,6 @@
                                 <label style="margin-top: 2%">Địa chỉ dự án:</label>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="country">Country: </label>
-                                    <form:select class="form-control" id="country" path="country">
-                                        <option value="Việt Nam">Việt Nam</option>
-                                    </form:select>
-                                </div>
                                 <div class="form-group col">
                                     <label for="provinceId">Tỉnh/Thành phố: </label>
                                     <form:select class="form-control" id="provinceId" path="province">
@@ -188,15 +182,9 @@
                                 <form:errors path="content"/>
                             </div>
                             <div class="form-group" >
-                                <label style="margin-top: 2%">Địa chỉ nhà đầu tư:</label>
+                                <label style="margin-top: 2%">Địa chỉ dự án:</label>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="country">Country: </label>
-                                    <form:select class="form-control" id="country" path="country">
-                                        <option value="Việt Nam">Việt Nam</option>
-                                    </form:select>
-                                </div>
                                 <div class="form-group col">
                                     <label for="provinceId">Tỉnh/Thành phố: </label>
                                     <form:select class="form-control" id="provinceId" path="province">

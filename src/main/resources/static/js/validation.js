@@ -70,37 +70,37 @@ function validateProfile() {
     const district = document.forms["formUpdate"]["district"].value;
     const subDistrict = document.forms["formUpdate"]["subdistrict"].value;
     if(fullName == "" || fullName == null){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isNameValid').html("Vui lòng nhập họ tên!");
         return false;
     }
     if (email == "" || !validateEmail(email)) {
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isEmailValid').html("Email không hợp lệ!");
         return false;
     }
     if (phone == "" || !isPhoneValid(phone)) {
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isPhoneValid').html("Số điện thoại không hợp lệ!");
         return false;
     }
     if(gender==""){
-        alert("Thông tin không hợp lệ")
+        // alert("Thông tin không hợp lệ")
         $('#genderErrror').html("Vui lòng chọn giới tính");
         return false;
     }
     if(province=="Tỉnh/Thành phố*"){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkProvince').html("Vui lòng chọn Tỉnh/thành phố!");
         return false;
     }
     if(district=="Quận/Huyện*"){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkDistrict').html("Vui lòng chọn Quận/huyện!");
         return false;
     }
     if(subDistrict=="Xã/Phường*" || subDistrict ==""){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         document.getElementById("subdistrictId").innerHTML = "";
         $('#checkSubDistrict').html("Vui lòng chọn Xã/phường!");
         return false;
@@ -118,38 +118,38 @@ function validateData() {
     const district = document.forms["formRegister"]["district"].value;
     const subDistrict = document.forms["formRegister"]["subdistrict"].value;
     if (username == "" || !isAlphabet(username)) {
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isUsernameValid').html("Tên đăng nhập không hợp lệ!");
         return false;
     }
     if(password != rePassword || password == ""){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isPasswordMatched').html("Mật khẩu không trùng khớp!");
         return false;
     }
     if (phone == "" || !isPhoneValid(phone)) {
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isPhoneValid').html("Số điện thoại không hợp lệ!");
         return false;
     }
     if (email == "" || !validateEmail(email)) {
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isEmailValid').html("Email không hợp lệ!");
         return false;
     }
 
     if(province=="Tỉnh/Thành phố*"){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkProvince').html("Vui lòng chọn Tỉnh/thành phố!");
         return false;
     }
     if(district=="Quận/Huyện*"){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkDistrict').html("Vui lòng chọn Quận/huyện!");
         return false;
     }
     if(subDistrict=="Xã/Phường*" || subDistrict ==""){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         document.getElementById("subdistrictId").innerHTML = "";
         $('#checkSubDistrict').html("Vui lòng chọn Xã/phường!");
         return false;
@@ -159,31 +159,33 @@ function validateData() {
 function validateProject() {
     const amountcalled = document.forms["saveProjectForm"]["amountcalled"].value;
     const province = document.forms["saveProjectForm"]["province"].value;
+    const projectname = document.forms["saveProjectForm"]["projectname"].value;
+
     const district = document.forms["saveProjectForm"]["district"].value;
     const subDistrict = document.forms["saveProjectForm"]["subdistrict"].value;
     if(!(isNumber(amountcalled)) || amountcalled < 100000){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#isNumeric').html("Vui lòng nhập số tiền > 100.000 đ");
         return false;
     }else{
         $('#isNumeric').html("");
     }
     if(province=="Tỉnh/Thành phố*"){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkProvince').html("Vui lòng chọn Tỉnh/thành phố!");
         return false;
     }else{
         $('#checkProvince').html("");
     }
     if(district=="Quận/Huyện*" || district == ""){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         $('#checkDistrict').html("Vui lòng chọn Quận/huyện!");
         return false;
     }else{
         $('#checkDistrict').html("");
     }
     if(subDistrict=="Xã/Phường*" || subDistrict ==""){
-        alert("Thông tin không hợp lệ!");
+        // alert("Thông tin không hợp lệ!");
         document.getElementById("subdistrictId").innerHTML = "";
         $('#checkSubDistrict').html("Vui lòng chọn Xã/phường!");
         return false;

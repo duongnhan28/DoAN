@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,13 +27,14 @@ public class BlogServices {
     }
 
     @Transactional
-    public Blogs saveBlog (String title, String content,String posteddate, String image){
+    public Blogs saveBlog (String title, String content, Date posteddate, String image){
         return blogDAO.save(new Blogs(title,content,posteddate,image));
     }
     @Transactional
-    public Blogs updateBlog (Long id,String title, String content,  String image){
+    public Blogs updateBlog (Long id,String title, String content, String image){
         Blogs blogs = blogDAO.findById(id).get();
         blogs.setTitle(title);
+
         blogs.setContent(content);
         blogs.setImage(image);
         return blogDAO.save(blogs);

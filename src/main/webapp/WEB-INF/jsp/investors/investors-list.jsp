@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row subpage">
                 <div class="col-sm-12 left">
-                    <div class="navigation"><a href="/startup/listProject"><i class="fas fa-home"></i>Trang chủ ></a><a href="/investor">Nhà đầu tư</a></div>
+                    <div class="navigation"><a style="font-weight: bold" href="/"><i class="fas fa-home"></i>Trang chủ > </a><a style="font-weight: bold" href="#">Nhà đầu tư</a></div>
                     <div class="list_project">
                         <div class="filter_box">
                             <a class="active" href="#">Tất cả</a>
@@ -85,7 +85,7 @@
                             <div class="col-12 col-sm-6 col-md-3 item">
                                 <div>
 
-                                        <a href="/investor/details/${investors.id}" ><img src="images/nhadautu/${investors.logo}" alt="Quỹ đổi mới công nghệ quốc gia" style="height: 140px;"></a>
+                                        <a href="/investor/details/${investors.id}" ><img src="/ndt/images/nhadautu/${investors.logo}" alt="Quỹ đổi mới công nghệ quốc gia" style="height: 140px;"></a>
                                         <div class="item_b">
                                             <h3><a href="investor/details/${investors.id}">${investors.investorsname}</a></h3>
                                             <p>
@@ -96,15 +96,26 @@
 
                                 </div>
                             </div>
+
                             </c:forEach>
+
                         </div>
                     </div>
                 </div>
 
             </div>
+            <div style=" margin-top: 5%; display: flex; justify-content: center; ">
+                <nav aria-label="..." >
+                    <ul class="pagination pagination-lg">
+                        <%-- Dưới đây là phân trang cho sản phẩm--%>
+                        <c:forEach begin="1" end="${pageSize}" varStatus="index">
+                            <li class="page-item"><a  class="page-link" href="/investor?page=${index.index}">${index.index}</a></li>
+                        </c:forEach>
+                    </ul>
+                </nav>
+            </div>
         </div>
-</div>
-</div><!-- Conatiner end -->
+
 </section><!-- Main container end -->
 
 <!-- Javascript Files

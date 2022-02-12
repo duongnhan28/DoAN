@@ -245,5 +245,10 @@ public class ProjectController {
             return "redirect:/startup/acceptInvestion";
         }
     }
+    @GetMapping("/startup/delProject/{id}")
+    public String delProject( @PathVariable("id") Long id,HttpSession session){
+        projectService.delProject(id);
+        return "redirect:/user/userListProject";
+    }
 
 }
